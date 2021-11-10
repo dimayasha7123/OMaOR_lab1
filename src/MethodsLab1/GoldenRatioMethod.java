@@ -6,13 +6,15 @@
 
 package MethodsLab1;
 
+import MethodsLab1.Abstract.Function1Var;
+import MethodsLab1.Abstract.OneDemMethod;
 import UTFE.TableOutput.Table;
 import Utils.Pair;
 
 import java.util.ArrayList;
 
-public class GoldenRatioMethod extends OneDemMethod{
-    public GoldenRatioMethod(Function func, Pair<Double, Double> interval) {
+public class GoldenRatioMethod extends OneDemMethod {
+    public GoldenRatioMethod(Function1Var func, Pair<Double, Double> interval) {
         super(func, interval);
     }
 

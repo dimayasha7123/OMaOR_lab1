@@ -6,14 +6,16 @@
 
 package MethodsLab1;
 
+import MethodsLab1.Abstract.Function1Var;
+import MethodsLab1.Abstract.OneDemMethod;
 import UTFE.TableOutput.Table;
 import Utils.Pair;
 
 import java.util.ArrayList;
 
-public class HalfDivisionMethod extends OneDemMethod{
+public class HalfDivisionMethod extends OneDemMethod {
 
-    public HalfDivisionMethod(Function func, Pair<Double, Double> interval) {
+    public HalfDivisionMethod(Function1Var func, Pair<Double, Double> interval) {
         super(func, interval);
     }
 

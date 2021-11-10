@@ -1,6 +1,8 @@
 package OMaOR_lab1;
 
 import MethodsLab1.*;
+import MethodsLab1.Abstract.Function1Var;
+import MethodsLab1.Abstract.OneDemMethod;
 import UTFE.TableOutput.Table;
 import Utils.Pair;
 
@@ -9,10 +11,10 @@ public class Main {
     public static void main(String[] args) {
         Table.SetDecimalPlaces(15);
 
-        Function myFunction = x -> (-1) * Math.exp((-1) * x) * Math.log(x);
+        Function1Var myFunction = x -> (-1) * Math.exp((-1) * x) * Math.log(x);
         Pair<Double, Double> myInterval = new Pair<>(0.5, 3.0);
 
-        Function testFunction = x -> (-1) * Math.PI * (27 * x - x * x * x) / 4;
+        Function1Var testFunction = x -> (-1) * Math.PI * (27 * x - x * x * x) / 4;
         Pair<Double, Double> testInterval = new Pair<>(0.0, 5.2);
 
         System.out.printf("EPS = %.3f\n", OneDemMethod.getEPS());

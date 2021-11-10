@@ -6,13 +6,15 @@
 
 package MethodsLab1;
 
+import MethodsLab1.Abstract.Function1Var;
+import MethodsLab1.Abstract.OneDemMethod;
 import UTFE.TableOutput.Table;
 import Utils.Pair;
 
 import java.util.ArrayList;
 
-public class FibonacciMethod extends OneDemMethod{
-    public FibonacciMethod(Function func, Pair<Double, Double> interval) {
+public class FibonacciMethod extends OneDemMethod {
+    public FibonacciMethod(Function1Var func, Pair<Double, Double> interval) {
         super(func, interval);
         precountFibonacci();//один раз бы конечно
     }
