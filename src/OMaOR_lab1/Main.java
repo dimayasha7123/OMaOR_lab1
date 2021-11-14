@@ -1,5 +1,7 @@
 package OMaOR_lab1;
 
+import Functions.Abstract.Function;
+import Functions.Dots.Dot1Var;
 import MethodsLab1.*;
 import MethodsLab1.Abstract.Function1Var;
 import MethodsLab1.Abstract.OneDemMethod;
@@ -10,6 +12,28 @@ import Utils.Pair;
 public class Main {
     public static void main(String[] args) {
         Table.SetDecimalPlaces(15);
+
+        Function testFunc = new Function() {
+            @Override
+            public double calc(Function subFunc, Dot1Var dot) {
+                double x = subFunc.calc(dot);
+                return 3 * x * x + 4 * x + 1;
+            }
+        };
+
+        Function subFunc = new Function() {
+            @Override
+            public double calc(Function subFunc, Dot1Var dot) {
+                double x = subFunc.calc(dot);
+                return 2 + 4 * x;
+            }
+        };
+
+        for (int x = 1; x <= 5; ++x) {
+            double answer = testFunc.calc(subFunc, new Dot1Var(x));
+            System.out.println("x = " + x);
+            System.out.println("answer = " + answer);
+        }
 
         Function1Var myFunction = x -> (-1) * Math.exp((-1) * x) * Math.log(x);
         Pair<Double, Double> myInterval = new Pair<>(0.5, 3.0);
